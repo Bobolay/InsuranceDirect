@@ -1,0 +1,106 @@
+.main-banner-wrapper
+  .banner-img-container
+    .img-bg style="background-image: url(#{asset_path('photo/main-banner-bg.jpg')})"
+
+  .banner-text-wrapper
+    .row
+      .columns.medium-8.large-6
+        .banner-text
+          p.header We are “I Insurance Direct”
+          p.larger Insuring California and Nevada for Over 40 Years Licensed in 26 States
+          p.smaller I Insure Direct has over 40 years of experience providing insurance solutions to the Restaurant Industry, Automotive Industry, Construction Industry, Environmental Industry and the Transportation Industry. We understand the protection you need because we specialize in your industry and stay on top of the changes in your specific industry. Changes in your industry may be sudden and immediate compliance to new regulations and exposures may be necessary to your insurance program to ensure that your business is fully covered and protected.
+          a.button.dark get a quote
+          a.button.transparent learn more
+
+.section-indent
+  .row
+    .columns
+      .section-subtitle Insurances we offer
+      .section-title We provide a wide range of insurance solutions
+
+      .row.collapse.collage-wrapper
+
+        .columns
+          .full-width-photo
+            .img-bg style="background-image: url(#{asset_path('photo/pexels-photo-125514.jpg')})"
+            .text
+              p.title Workers Compensation
+              p.subtitle Insurance
+        .columns.medium-8
+          .rectangle
+            .img-bg style="background-image: url(#{asset_path('photo/pexels-photo123.jpg')})"
+            .text
+              p.title Restaurant & Bar
+              p.subtitle Insurance
+        .columns.medium-4
+          .square
+            .img-bg style="background-image: url(#{asset_path('photo/pexels-photo-24075.jpg')})"
+            .text
+              p.title Garage Liability
+              p.subtitle Insurance
+        .columns.medium-8
+          .rectangle
+            .img-bg style="background-image: url(#{asset_path('photo/pexels-photo-25930.jpg')})"
+            .text
+              p.title Contractor General Liability
+              p.subtitle Insurance
+        .columns.medium-4
+          .square
+            .img-bg style="background-image: url(#{asset_path('photo/pexels-photo-57825.jpg')})"
+            .text
+              p.title Environmental
+              p.subtitle Insurance
+        .columns.medium-8
+          .rectangle
+            .img-bg style="background-image: url(#{asset_path('photo/pexels-photo-66363.jpg')})"
+            .text
+              p.title Transportation
+              p.subtitle Insurance
+        .columns.medium-4
+          .square.read-more-block
+            .read-text
+              .icon = inline_svg "svg/IID-catalogue-v1-01.svg"
+              p.title View all insurances
+              p.regular 11 more
+
+.grey-bg.testemonials-block
+  .row
+    .columns
+      .section-subtitle Customers reviews
+      .section-title What people say about us
+
+      .testemonials-slider-wrapper
+        .quote-icon = inline_svg "svg/IID-quotes-v1-01.svg"
+        .slider-controls
+          .prev-slide = inline_svg "svg/IID-arrow-left-v1-01.svg"
+          .next-slide = inline_svg "svg/IID-arrow-right-v1-01.svg"
+        ul.testemonial-slider
+          li
+            p.testemonial They are the best preferred provider for workers’ compensation to our members!
+            .author-block
+              .icon style="background-image: url(#{asset_path('photo/stuff1.jpg')})"
+              .name Timothy Hacker
+              .position Director of Business Development, Nevada Restaurant Association
+          li
+            p.testemonial Vitae dolorum atque, eaque, modi ducimus commodi iure officia reprehenderit eius quasi eligendi natus aliquam dolore recusandae nobis.
+            .author-block
+              .icon style="background-image: url(#{asset_path('photo/stuff1.jpg')})"
+              .name Timothy Hacker
+              .position Director of Business Development, Nevada Restaurant Association
+          li
+            p.testemonial Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis inventore ea quisquam.
+            .author-block
+              .icon style="background-image: url(#{asset_path('photo/stuff1.jpg')})"
+              .name Timothy Hacker
+              .position Director of Business Development, Nevada Restaurant Association
+
+.section-indent.large
+  .row
+    .columns
+      .section-subtitle our partners
+      .section-title We work closely with a famous insurance companies all around United States
+
+      .owl-carousel.owl-carousel-partners
+        .partner-block style="background-image: url(#{asset_path('photo/IID-about-partners-logo-v1.jpg')})"
+        .partner-block style="background-image: url(#{asset_path('photo/IID-about-partners-logo-v2.jpg')})"
+        .partner-block style="background-image: url(#{asset_path('photo/IID-about-partners-logo-v3.jpg')})"

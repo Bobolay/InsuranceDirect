@@ -1,0 +1,115 @@
+.header-container
+  position: fixed
+  width: 100%
+  +transition-property(transform)
+  +transition-duration(1s)
+  +translate(0,-100%)
+  z-index: 11
+  &.scrolled, &.visible
+    +translate(0,0)
+
+  .top-part, .bottom-part
+    position: relative
+    display: flex
+    justify-content: space-between
+
+  .top-part
+    padding: 6px 30px
+    background: $grey200
+    font-size: 12px
+    span
+      color: $grey500
+    a
+      color: $blue600
+      margin-left: 10px
+    @media #{$small-only}
+      display: none
+
+  .bottom-part
+    padding: 0 30px
+    background: white
+
+  .left-part, .right-part
+    align-self: center
+  .left-part
+    margin-right: auto
+  .right-part
+    margin-left: auto
+  .middle
+    +xy-align
+    border-radius: 3px
+    padding-left: 40px
+    background: $blue600
+    .icon
+      position: absolute
+      width: 40px
+      height: 40px
+      top: 0
+      left: 0
+      background: $blue700
+      padding: 10px
+      border-radius: 3px
+      cursor: pointer
+      svg
+        fill: white
+    a
+      font-size: 14px
+      +bold
+      text-transform: uppercase
+      color: white
+      line-height: 40px
+      padding: 0 20px
+
+  .logo
+    width: 150px
+    @media #{$small-only}
+      width: 100px
+    @media #{$xxlarge-up}
+      width: 200px
+  .header-menu
+    li
+      display: inline-block
+      margin: 0 16px
+      a
+        font-size: 14px
+        color: $grey800
+        line-height: 70px
+        text-transform: uppercase
+        border-bottom: 3px solid transparent
+        +bold
+        &:hover
+          color: $blue600
+          border-bottom: 3px solid $blue600
+
+
+  //     H a m b u r g e r
+  
+  .hamburger
+    margin-left: 4em
+    .hamburger-box
+      width: 32px
+      cursor: pointer
+
+    .hamburger-inner
+      width: 100%
+      border-radius: 0
+      height: 2px
+      background: $brown800
+      &:before, &:after
+        width: 100%
+        background: $brown800
+        height: 2px
+        border-radius: 0
+    
+    @media #{$large-up}
+      &.is-active
+        .hamburger-inner
+          background: white
+          &:before, &:after
+            background: white
+        &:hover
+          .hamburger-inner
+            background: red
+            &:before, &:after
+              background: red
+

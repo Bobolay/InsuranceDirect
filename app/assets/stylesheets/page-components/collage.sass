@@ -1,0 +1,105 @@
+.collage-wrapper
+
+  .full-width-photo
+    position: relative
+    padding-bottom: 100%
+    background-position: center
+    background-size: cover
+    margin: 0 auto 10px
+    width: calc(100% - 20px)
+    overflow: hidden
+    @media #{$large-up}
+      padding-bottom: 50%
+
+  .collage-container
+    margin: 10px 0
+
+  .hide
+    display: none
+    @media #{$xlarge-up}
+      display: block
+
+  .square, .rectangle
+    position: relative
+    width: calc(100% - 20px)
+    margin: 10px
+    overflow: hidden
+    @media #{$small-only}
+      width: calc(100% - 20px)
+
+  .square
+    &:before
+      +square
+  .rectangle
+    &:before
+      content: ''
+      display: block
+      padding-top: calc(50% - 10px)
+    @media #{$small-only}
+      &:before
+        padding-top: 100%
+
+  .text
+    position: absolute
+    color: white
+    bottom: 30px
+    left: 30px
+  .title
+    +droid
+    font-size: 36px
+    +bold
+    line-height: 1
+  .subtitle
+    +droid
+    font-size: 24px
+    font-style: italic
+
+  .read-more-block
+    background: $blue600
+    flex-direction: column
+    .read-text
+      +xy-align
+      text-align: center
+      color: white
+    .icon
+      margin: 0 auto
+      width: 64px
+      height: 64px
+    .title
+      +droid
+      font-size: 21px
+      +bold
+      margin: 20px 0 10px
+    .regular
+      +droid
+      font-style: italic
+
+  .full-width-photo, .square, .rectangle
+    cursor: pointer
+    .img-bg
+      +transition(transform 1s)
+    &:after
+      content: 'view'
+      text-transform: uppercase
+      display: block
+      border: 2px solid white
+      border-radius: 3px
+      line-height: 40px
+      padding: 0 30px
+      color: white
+      +xy-align
+      opacity: 0
+      +transition(opacity 0.5s)
+    &.read-more-block
+      &:after
+        display: none
+    .text
+      +transition(0.5s ceaser($easeOutCubic))
+    &:hover
+      .img-bg
+        +scale(1.05)
+      &:after
+        opacity: 1
+      .text
+        +translate(0,100px)
+        opacity: 0

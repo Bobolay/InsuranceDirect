@@ -1,0 +1,44 @@
+.main-banner-wrapper
+  position: relative
+  @media #{$medium-up}
+    height: 100vh
+  .banner-img-container
+    position: relative
+    @media #{$small-only}
+      &:before
+        +square
+    @media #{$medium-up}
+      +fullsize
+
+  .banner-text-wrapper
+    position: absolute
+    bottom: 50px
+    @media #{$small-only}
+      position: relative
+      bottom: initial
+      margin-top: -50px
+    @media #{$xxlarge-up}
+      bottom: 100px
+  .banner-text
+    background: $blue500
+    padding: 30px
+    .header
+      +droid
+      font-size: 40px
+      +bold
+      color: white
+    .larger
+      position: relative
+      +droid
+      font-size: 18px
+      font-style: italic
+      color: $grey900
+      margin-bottom: 20px
+      padding-bottom: 20px
+      width: 400px
+      max-width: 100%
+      &:after
+        +underline
+    .smaller
+      font-size: 14px
+      color: white

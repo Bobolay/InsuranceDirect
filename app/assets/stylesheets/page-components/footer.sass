@@ -1,0 +1,28 @@
+.footer-wrapper
+  background: $grey900
+
+  .top
+    padding: 50px 0
+
+  .h2
+    position: relative
+    +droid
+    color: $blue600
+    margin-bottom: 20px
+    padding-bottom: 20px
+    &.underlined
+      &:after
+        +underline(90px, $grey600)
+  .smaller
+    color: white
+  ul
+    li
+      line-height: 1
+      margin: 20px 0
+      a
+        font-size: 14px
+        text-transform: uppercase
+        color: white
+        +bold
+
+  .bottom
